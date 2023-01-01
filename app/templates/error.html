@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='img/icon-error0.png') }}">
+<title>Error {{ status }}</title>
+{% endblock %}
+
+{% block body %}
+<div class="error_body">
+    <h1>{{ status }}</h1>
+    <p>{{ error }}</p>
+    <form action="/" method="GET">
+        <input type="submit" value="Back" class="btn btn-info">
+    </form>
+</div>
+{% endblock %}
